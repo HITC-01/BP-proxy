@@ -27,10 +27,10 @@ const httpProxy = require('http-proxy');
 const app = express();
 const apiProxy = httpProxy.createProxyServer();
 
-// const user = 'http://localhost:3001',
+const user = 'http://localhost:3001',
   related = 'http://localhost:3002',
-  // comment = 'http://localhost:3003',
-  // player = 'http://localhost:3004';
+  comment = 'http://localhost:3003',
+  player = 'http://localhost:3004';
 
 
 app.use(express.static(path.join(__dirname, 'public')));
