@@ -1,0 +1,85 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+:focus {
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: #f2f2f2;
+  margin: 0 auto;
+}
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+blockquote, q {
+  quotes: "" "";
+}
+
+#rest {
+  background: white;
+  margin: 0 auto;
+  width: 960px;
+  display: grid;
+  grid-template-rows: [top] 380px [pad] 20px [play-bottom] auto [bottom];
+  grid-template-columns: [left] 20px [left-pad] 580px [mid] 20px [small] auto [right-pad] 20px [right];
+}
+
+#player {
+  grid-row: top / play-bottom;
+  grid-column: left / right;
+}
+
+#left {
+  grid-row: play-bottom / bottom;
+  grid-column: left-pad / mid;
+  display: flex;
+  flex-direction: column;
+}
+
+#left-second{
+  display:flex;
+  flex-direction: column;
+}
+
+#user {
+  margin-bottom: 20px;
+}
+
+#right {
+  grid-row: play-bottom / bottom;
+  grid-column: small / right-pad;
+  display: flex;
+  flex-direction: column;
+}
